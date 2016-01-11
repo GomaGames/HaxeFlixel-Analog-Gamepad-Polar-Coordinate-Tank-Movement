@@ -55,6 +55,10 @@ class Tank extends FlxNestedSprite{
     turret.loadGraphic("assets/images/tankTurret.png");
     turret.relativeAngle = 180; // start facing "forward"
     this.add(turret);
+
+    // smoothen out with anti-aliasing when rotated (affects performance)
+    this.antialiasing = true;
+    turret.antialiasing = true;
   }
 
   override public function update():Void
